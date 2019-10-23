@@ -7,20 +7,23 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-input placeholder="Name" type="text" name="name"></ion-input>
-    </ion-row>
-    <ion-row>
-      <ion-input placeholder="Nickname" type="text" name="nickname"></ion-input>
-    </ion-row>
-    <ion-row>
-      <ion-input placeholder="Age" type="number" name="age"></ion-input>
-    </ion-row>
-    <ion-grid>
+  <ion-grid class="homepage">
+    <form #form="ngForm" (ngSubmit)="presentAlertConfirm(form)" method="post">
       <ion-row>
-        <ion-button color="primary" (click)="submit()">Submit</ion-button>
+        <ion-input class="input" ngModel placeholder="Name" type="text" name="name"></ion-input>
       </ion-row>
-    </ion-grid>
+      <br>
+      <ion-row>
+        <ion-input class="input" ngModel placeholder="Nickname" type="text" name="nickname"></ion-input>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-input class="input" ngModel placeholder="Age" type="number" name="age"></ion-input>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-button class="button" color="primary" type="submit">Submit</ion-button>
+      </ion-row>
+    </form>
   </ion-grid>
 </ion-content>
